@@ -2,7 +2,7 @@ ARG FRIGATE_IMAGE=ghcr.io/blakeblackshear/frigate:stable
 ARG LIBUSB_PKG_VERSION=1.0.24
 ARG LIBUSB_PKG_BUILD=3
 
-FROM debian:buster AS build
+FROM debian:bullseye AS build
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LIBUSB_PKG_VERSION
 
