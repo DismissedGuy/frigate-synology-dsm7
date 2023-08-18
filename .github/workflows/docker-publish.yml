@@ -53,6 +53,6 @@ jobs:
           platforms: linux/amd64
           context: ./docker
           push: ${{ github.event_name != 'pull_request' }}
-          tags: 'stable'
+          tags: 'dismissedguy/frigate-synology-dsm7:stable'
           cache-from: type=gha
           cache-to: type=gha,mode=max
