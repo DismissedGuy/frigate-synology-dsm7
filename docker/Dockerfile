@@ -5,10 +5,14 @@ ARG LIBUSB_PKG_BUILD=3
 FROM ${FRIGATE_IMAGE} AS build
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LIBUSB_PKG_VERSION
+
+# Install deps
 ADD deb-src.list /etc/apt/sources.list.d/
-RUN apt-get update \
-  && apt-get install -y \
-    dpkg-dev
+RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
+  && apt-get update \
+  && apt-get install -y dpkg-dev
+
+# Build & install libusb
 RUN mkdir -p /root/libusb \
   && cd /root/libusb \
   && apt-get source libusb-1.0-0 \
