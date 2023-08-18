@@ -8,8 +8,7 @@ ARG LIBUSB_PKG_VERSION
 
 # Install deps
 ADD deb-src.list /etc/apt/sources.list.d/
-RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
-  && apt-get update \
+RUN apt-get update \
   && apt-get install -y dpkg-dev
 
 # Build & install libusb
