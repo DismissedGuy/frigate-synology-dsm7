@@ -2,7 +2,7 @@
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/DismissedGuy/frigate-synology-dsm7/docker-publish.yml)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/DismissedGuy/frigate-synology-dsm7/main)
 
-A fork of @weltenwort's [frigate-synology-dsm7](https://github.com/weltenwort/frigate-synology-dsm7) that follows the latest frigate stable tag.
+A fork of @weltenwort's [frigate-synology-dsm7](https://github.com/weltenwort/frigate-synology-dsm7) that follows the latest frigate stable tag. It is updated every Monday at midnight, UTC.
 
 This repository provides a Docker image for [frigate](https://github.com/blakeblackshear/frigate) that supports using a Google Coral USB TPU. It is based on the official upstream frigate image but recompiles `libusb1` without `udev` support.
 
